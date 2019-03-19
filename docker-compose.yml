@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  ping:
+    build:
+      context: ./Ping
+      dockerfile: Dockerfile
+    ports: 
+      - 5000:5000
+    #links:
+    #  - "pong"
+  pong: 
+    build:
+      context: ./Pong
+      dockerfile: Dockerfile
+    ports: 
+      - 5100:5000
